@@ -1,0 +1,14 @@
+# Sensitive credentials
+.env
+
+# Python virtual environment
+.venv/
+
+# PyCharm / JetBrains IDE settings
+.idea/
+
+# Python compiled bytecode cache
+__pycache__/
+*.pyc
+
+
