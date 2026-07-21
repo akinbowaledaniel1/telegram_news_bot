@@ -74,7 +74,7 @@ def ask_keyword(message, category,):
         bot.register_next_step_handler(msg, get_keyword,category)
     elif answer=="NO":
         bot.reply_to(message,f"Fetching the latest {category.upper()} news...")
-        result = gnews_api(category)
+        result = gnews_api(category=category)
         loop(message.chat.id, result)
     else:
         msg= bot.reply_to(message,"Please enter yes or no")

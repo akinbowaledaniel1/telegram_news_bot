@@ -1,6 +1,5 @@
 import os
 import requests
-import telebot
 from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.getenv("GNEWS_API_KEY")
@@ -40,9 +39,9 @@ def gnews_api(keyword=None, category=None,country=None):
             })
 
         return articles
-    except Exception as e:
-        print(e)
     except requests.exceptions.ConnectionError:
         print("No internet connection or server is down.")
+    except Exception as e:
+        print(e)
 
 gnews_api()
